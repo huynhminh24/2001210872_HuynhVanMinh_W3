@@ -26,6 +26,7 @@ void xuatMaTran(int a[MAX][MAX], int m, int n) {
 
 // Hàm tính và xuất tổng giá trị từng dòng
 void tongGiaTriTungDong(int a[MAX][MAX], int m, int n) {
+    printf("2. Tong gia tri tung dong:\n");
     for (int i = 0; i < m; i++) {
         int tong = 0;
         for (int j = 0; j < n; j++) {
@@ -37,6 +38,7 @@ void tongGiaTriTungDong(int a[MAX][MAX], int m, int n) {
 
 // Hàm xuất phần tử lớn nhất trên từng cột
 void phanTuLonNhatTungCot(int a[MAX][MAX], int m, int n) {
+    printf("3. Phan tu lon nhat tren tung cot:\n");
     for (int j = 0; j < n; j++) {
         int max = a[0][j];
         for (int i = 1; i < m; i++) {
@@ -50,7 +52,7 @@ void phanTuLonNhatTungCot(int a[MAX][MAX], int m, int n) {
 
 // Hàm xuất các phần tử thuộc các đường biên
 void xuatDuongBien(int a[MAX][MAX], int m, int n) {
-    printf("Cac phan tu duong bien:\n");
+    printf("4. Cac phan tu duong bien:\n");
     bool hasElement = false;
     // Duong bien tren
     for (int j = 0; j < n; j++) {
@@ -93,7 +95,7 @@ bool laCucDai(int a[MAX][MAX], int m, int n, int i, int j) {
 
 // Hàm xuất các phần tử cực đại
 void xuatCacPhanTuCucDai(int a[MAX][MAX], int m, int n) {
-    printf("Cac phan tu cuc dai:\n");
+    printf("5. Cac phan tu cuc dai:\n");
     bool hasElement = false;
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
@@ -125,7 +127,7 @@ bool laHoangHau(int a[MAX][MAX], int m, int n, int i, int j) {
 
 // Hàm xuất các phần tử hoàng hậu
 void xuatCacPhanTuHoangHau(int a[MAX][MAX], int m, int n) {
-    printf("Cac phan tu hoang hau:\n");
+    printf("6. Cac phan tu hoang hau:\n");
     bool hasElement = false;
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
@@ -159,7 +161,7 @@ bool laDiemYenNgua(int a[MAX][MAX], int m, int n, int i, int j) {
 
 // Hàm xuất các điểm yên ngựa
 void xuatCacDiemYenNgua(int a[MAX][MAX], int m, int n) {
-    printf("Cac diem yen ngua:\n");
+    printf("7. Cac diem yen ngua:\n");
     bool hasElement = false;
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
@@ -176,7 +178,7 @@ void xuatCacDiemYenNgua(int a[MAX][MAX], int m, int n) {
 
 // Hàm xuất dòng chỉ chứa số chẵn
 void xuatDongChiChuaSoChan(int a[MAX][MAX], int m, int n) {
-    printf("Cac dong chi chua so chan:\n");
+    printf("8. Cac dong chi chua so chan:\n");
     bool hasElement = false;
     for (int i = 0; i < m; i++) {
         bool chiChuaSoChan = true;
@@ -236,7 +238,7 @@ int main() {
 
     // Tạo ma trận ngẫu nhiên
     taoMaTran(a, m, n, a_val, b_val);
-    printf("Ma tran ngau nhien:\n");
+    printf("1. Ma tran ngau nhien:\n");
     xuatMaTran(a, m, n);
 
     // Xuất tổng giá trị từng dòng
@@ -262,7 +264,7 @@ int main() {
 
     // Sắp xếp ma trận tăng theo từng dòng
     sapXepTangTheoDong(a, m, n);
-    printf("Ma tran sau khi sap xep theo tung dong:\n");
+    printf("9. Ma tran sau khi sap xep theo tung dong:\n");
     xuatMaTran(a, m, n);
 
     return 0;
